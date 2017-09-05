@@ -13,7 +13,7 @@ var app = {
 
 gulp.task('lib',function () {
     //读取目录
-   gulp.src('bower_components/**/*.js')
+   gulp.src('node_modules/**/*.js')
        //拷贝文件到指定目录
        .pipe(gulp.dest(app.devPath + 'vendor'))
        .pipe(gulp.dest(app.prdPath + 'vendor'))

@@ -1,0 +1,37 @@
+.position-list{
+  background: @defaultColor;
+  .item{
+    position: relative;
+    padding:10px;
+    border-bottom:1px solid @bodyBgColor;
+    .clearFix;
+    img{
+      .w(65);
+      .h(65);
+      .mr(5);
+      float: left;
+    }
+    .icon{
+      position: absolute;
+      right:10px;
+      top:50%;
+      .w(30);
+      .h(28);
+      .mt(-14);
+      background-repeat:no-repeat;
+      background-size: 100% 100%;
+      &.star{
+        background-image: url(../image/star.png);
+      }
+      &.star-active{
+        background-image: url("../image/star-active.png");
+      }
+    }
+  }
+}
+.search-lest{
+  margin-top:82px;
+}
+.send-lest{
+  margin-top:42px;
+}

@@ -1,0 +1,131 @@
+.register{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background: url("../image/background.png") no-repeat;
+  background-size: 100% 100%;
+  form{
+    .mt(60);
+    .form-line{
+      position: relative;
+      .w(300);
+      .h(40);
+      .lh(36);
+      margin:0 auto;
+      background: @formBgColor;
+      color: @defaultColor;
+      box-sizing: border-box;
+      font-size:0;
+      &:first-child{
+        border-bottom:1px solid @defaultColor;
+      }
+      .account, .lock{
+        display: inline-block;
+        vertical-align: middle;
+        .w(40);
+        .h(40);
+      }
+      .account{
+        vertical-align: top;
+        background:@iconBgColor url("../image/account.png") center no-repeat;
+      }
+      .lock{
+        vertical-align: top;
+        background:@iconBgColor url("../image/lock.png") center no-repeat;
+      }
+      input{
+        .w(200);
+        .h(22);
+        color: @defaultColor;
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        background: none;
+        padding-left:10px;
+        outline:none;
+        &::-webkit-input-placeholder{
+          color: @defaultColor;
+        }
+      }
+      span:last-child{
+        position: absolute;
+        right:5px;
+        top:50%;
+        margin-top:-16px;
+        font-size:14px;
+        color: @alertColor;
+      }
+    }
+
+    .message-wrap{
+      position: relative;
+      .w(290);
+      margin-left:auto;
+      margin-right:auto;
+      .mt(40);
+      .message-box{
+        .w(170);
+        .h(40);
+        .fs(14);
+        .pl(30);
+        color: @defaultColor;
+        background: @formBgColor;
+        border:none;
+        outline:none;
+        &::-webkit-input-placeholder{
+          color: @defaultColor;
+        }
+        & + span{
+          position: absolute;
+          font-size:14px;
+          color: @alertColor;
+          .left(136);
+          top:50%;
+          .mt(-8);
+        }
+      }
+      .message{
+        position: absolute;
+        top:50%;
+        right:0;
+        width:63px;
+        height:24px;
+        line-height:24px;
+        text-align: center;
+        margin-top:-12px;
+        .fs(14);
+        color: @activeColor;
+        border:1px solid @activeColor;
+        &.disabled{
+          color: @lineColor;
+          border:1px solid @lineColor;
+        }
+      }
+
+    }
+
+    button{
+      .w(300);
+      .h(35);
+      display: block;
+      margin:0 auto;
+      outline: none;
+      border:none;
+      font-weight:bold;
+      font-size:22px;
+      &.login-btn{
+        margin-top:75px;
+        background-color: @activeColor;
+        color: @defaultColor;
+      }
+      &.register-btn{
+        margin-top:20px;
+        background-color: @btnBgColor;
+        color: @activeColor;
+        border:1px solid @activeColor;
+      }
+    }
+  }
+}

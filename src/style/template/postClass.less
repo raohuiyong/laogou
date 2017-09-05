@@ -1,0 +1,46 @@
+.postClass{
+  background: @defaultColor;
+  border-top:1px solid @bodyBgColor;
+  .pt(15);
+  .boxs;
+  h5{
+    .ml(10);
+    .mb(20);
+  }
+  button{
+    width:60px;
+    height:30px;
+    line-height: 30px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border:none;
+    outline:none;
+    background: @headBgColor;
+    .ml(10);
+    .mb(5);
+    &.active{
+      background: @activeColor;
+      color: @defaultColor;
+    }
+  }
+  ul{
+    .ml(10);
+    .pt(10);
+    border-top:1px solid @bodyBgColor;
+    li{
+      overflow: hidden;
+      position: relative;
+      p{
+        .mb(10);
+      }
+      span{
+        color: @alertColor;
+        position: absolute;
+        .right(10);
+        top:50%;
+        margin-top:-10px;
+      }
+    }
+  }
+}

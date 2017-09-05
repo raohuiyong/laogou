@@ -1,0 +1,10 @@
+<!-- 职位详情页面 -->
+<div app-deta-head text="职位详情"></div>
+<div app-deta-info is-active="1" pos="position" is-login="isLogin"></div>
+<div app-deta-company com="com"></div>
+<div class="detaDesc">
+    <h5>职位描述</h5>
+    <pre ng-bind="position.description">
+    </pre>
+</div>
+<button class="bottom-btn" ng-click="go()" ng-bind="message"></button>

@@ -1,0 +1,10 @@
+<ul class="position-list">
+    <li ui-sref="position({id:item.id})" class="item" ng-repeat="item in data | filterByObj:filterObj">
+        <img ng-src="{{item.imageUrl}}" alt="{{item.companyName}}">
+        <h3 ng-bind="item.name"></h3>
+        <p ng-bind="item.companyName + '[' + item.cityName + ']' + item.industryName"></p>
+        <p><span ng-bind="item.salaryName"></span>&nbsp;&nbsp;<span ng-bind="item.scaleName"></span></p>
+        <p ng-bind="item.date"></p>
+        <span ng-if="isFavorite" ng-click="$event.stopPropagation();select(item)"  class="icon {{item.select?'star-active':'star'}}"></span>
+    </li>
+</ul>

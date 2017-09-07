@@ -17,7 +17,7 @@ angular.module('app').directive('appPositionList',['$http',function ($http) {
                     item.select = !item.select;
                 });
 
-            }
+            };
         }
     }
 }]);

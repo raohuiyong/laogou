@@ -1,4 +1,5 @@
 angular.module('app').controller('detailsCtrl',['$scope','$http','$state','$q','cache',function ($scope,$http,$state,$q,cache) {
+
     $scope.isLogin = !!cache.get('name');
     $scope.message = $scope.isLogin?'投个简历':'登录';
     //$q 解决ajax回调地狱，用于多个异步请求变同步
@@ -38,5 +39,4 @@ angular.module('app').controller('detailsCtrl',['$scope','$http','$state','$q','
             }
         }
     };
-
 }]);

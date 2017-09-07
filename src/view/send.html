@@ -1,3 +1,6 @@
-<div app-head-bar head="投递记录"></div>
-<div app-tab select-id="{{selectId}}" tab-click="tabClick(id,name)" tab-list="tabList"></div>
-<div class="send-lest" app-position-list filter-obj="filterObj" data="positionList"></div>
+<div ng-swipe-right="rightSwiper()">
+    <div app-head-bar head="投递记录"></div>
+    <div app-tab select-id="{{selectId}}" tab-click="tabClick(id,name)" tab-list="tabList"></div>
+    <div class="send-lest" app-position-list filter-obj="filterObj" data="positionList"></div>
+
+</div>

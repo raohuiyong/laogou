@@ -1,7 +1,10 @@
 /**
  * Created by deepcam on 2017/8/14.
  */
-angular.module('app').value('dict',{}).run(['$http','dict',function ($http,dict) {
+angular.module('app').value('dict',{}).run(['$http','dict','$rootScope','$state',function ($http,dict,$rootScope,$state) {
+    $rootScope.leftSwiper = function () {
+        $state.go(window.history.forward())
+    };
     $http.get('data/city.json').then(function (resp) {
         dict.city = resp.data;
     });
@@ -11,4 +14,7 @@ angular.module('app').value('dict',{}).run(['$http','dict',function ($http,dict)
     $http.get('data/scale.json').then(function (resp) {
         dict.scale = resp.data;
     });
+    $rootScope.rightSwiper = function () {
+        $state.go(window.history.back())
+    };
 }]);
